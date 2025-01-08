@@ -17,7 +17,7 @@ export default function Courses() {
         setCourses(response.documents);
     }
 
-    const languages = ["All", "JavaScript", "Python", "C", "Java"];
+    const languages = ["All", "JavaScript", "Python", "C", "Java", "Dart"];
     const [selectedLanguage, setSelectedLanguage] = useState("All");
 
     const filteredCourses = selectedLanguage === "All"
@@ -27,7 +27,7 @@ export default function Courses() {
     return (
         <section className="p-4">
             <h1 className="text-4xl font-bold text-primary mb-8">Courses</h1>
-            <div className='flex space-x-4 mb-6'>
+            <div className='flex space-x-4 mb-6 flex-wrap space-y-2'>
                 {languages.map((language, index) => {
                     return <button
                         key={index}
