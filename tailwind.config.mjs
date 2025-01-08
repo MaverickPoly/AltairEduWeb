@@ -8,10 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#1a202c',
+        secondary: '#4A5568',
+        accent: '#4e45e3',
+        background: '#EDF2F7',
+        textPrimary: '#2D3748',
+        textSecondary: '#718096',
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
