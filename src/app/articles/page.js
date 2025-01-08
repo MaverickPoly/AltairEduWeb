@@ -6,26 +6,6 @@ import {Query} from "appwrite";
 import {useEffect, useState} from "react";
 
 export default function Articles() {
-    // const articles = [
-    //     {
-    //         title: 'Understanding React Hooks',
-    //         content: 'React hooks allow you to use state and other features without writing a class...',
-    //         image: 'https://itproger.com/img/courses/x1733135835.jpg.pagespeed.ic.tEKDBA2PXG.jpg',
-    //         date: 'January 1, 2025',
-    //     },
-    //     {
-    //         title: 'A Guide to JavaScript ES6',
-    //         content: 'Learn about the latest features introduced in ES6 that make JavaScript more powerful...',
-    //         image: 'https://itproger.com/img/courses/x1733135835.jpg.pagespeed.ic.tEKDBA2PXG.jpg',
-    //         date: 'December 20, 2024',
-    //     },
-    //     {
-    //         title: 'Top programming languages in 2025',
-    //         content: 'Learn about the latest features introduced in ES6 that make JavaScript more powerful...',
-    //         image: 'https://itproger.com/img/courses/x1733135835.jpg.pagespeed.ic.tEKDBA2PXG.jpg',
-    //         date: 'December 20, 2024',
-    //     },
-    // ];
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
@@ -36,7 +16,6 @@ export default function Articles() {
         const response = await db.articles.list([Query.orderDesc("$createdAt")]);
         setArticles(response.documents);
     }
-    console.log(articles);
 
     return (
         <section className="px-4">

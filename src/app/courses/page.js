@@ -16,7 +16,6 @@ export default function Courses() {
         const response = await db.courses.list([Query.orderDesc("$createdAt")]);
         setCourses(response.documents);
     }
-    console.log(courses);
 
     const languages = ["All", "JavaScript", "Python", "C", "Java"];
     const [selectedLanguage, setSelectedLanguage] = useState("All");

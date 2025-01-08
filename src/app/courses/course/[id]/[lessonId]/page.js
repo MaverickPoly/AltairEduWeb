@@ -28,9 +28,6 @@ export default function LessonContent(context) {
         setRenderedContent(md.render(myLesson.content));
     }
 
-    console.log(lesson);
-    console.log(course);
-
 
     return (
         <section className="p-6 max-w-4xl mx-auto bg-white rounded">

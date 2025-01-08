@@ -8,17 +8,10 @@ import {Query} from "appwrite";
 
 export default function CourseLessons(context) {
     const {id} = React.use(context.params);
-    console.log(id);
 
     const [lessons, setLessons] = useState([]);
     const [course, setCourse] = useState({});
 
-    // const lessons = [
-    //     {title: "Introduction to React"},
-    //     {title: "Components and Props"},
-    //     {title: "State and Lifecycle"},
-    //     {title: "UseEffect Hook"},
-    // ];
     useEffect(() => {
         init();
     }, []);
@@ -33,9 +26,6 @@ export default function CourseLessons(context) {
         ]);
         setLessons(response.documents);
     }
-
-    // console.warn(lessons);
-    // console.log(course.lesson);
 
     return (
         <section className="p-6 max-w-4xl mx-auto">

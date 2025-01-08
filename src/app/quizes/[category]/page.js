@@ -7,7 +7,6 @@ import {useRouter} from "next/navigation";
 
 export default function QuizPage(context) {
     const {category} = React.use(context.params);
-    console.log(category);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState({});

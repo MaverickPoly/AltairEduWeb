@@ -8,7 +8,6 @@ import db from "@/backend/databases";
 
 export default function ReadArticle(context) {
     const {id} = React.use(context.params);
-    console.log(id);
 
     const [article, setArticle] = useState({});
     const [markdown, setMarkdown] = useState("");
@@ -23,9 +22,6 @@ export default function ReadArticle(context) {
         setArticle(myArticle);
         setMarkdown(md.render(myArticle.content));
     }
-
-    console.log(article);
-    console.log(markdown);
 
     return (
         <div className="max-w-3xl mx-auto p-6 space-x-8">
