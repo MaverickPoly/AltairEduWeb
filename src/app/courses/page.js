@@ -17,7 +17,7 @@ export default function Courses() {
         setCourses(response.documents);
     }
 
-    const languages = ["All", "JavaScript", "Python", "C", "Java", "Dart"];
+    const languages = ["All", "JavaScript", "Python", "C", "Java"];
     const [selectedLanguage, setSelectedLanguage] = useState("All");
 
     const filteredCourses = selectedLanguage === "All"
